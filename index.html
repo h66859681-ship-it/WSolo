@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>WSOLO Language Spec</title>
+    <style>
+        body { background: #000; color: #00ff41; font-family: 'Consolas', monospace; padding: 30px; }
+        .wrapper { max-width: 850px; margin: 0 auto; border: 1px solid #222; padding: 25px; background: #050505; }
+        h1 { color: #fff; text-align: center; border-bottom: 2px solid #00ff41; padding-bottom: 10px; }
+        h2 { color: #fff; border-left: 4px solid #00ff41; padding-left: 10px; margin-top: 30px; }
+        .code-box { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 15px; margin: 10px 0; color: #adadad; }
+        .kw { color: #fff; font-weight: bold; }
+        .mail { margin-top: 50px; border-top: 1px solid #222; padding-top: 20px; font-size: 0.8em; text-align: center; }
+        a { color: #00ff41; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>WSOLO SPECIFICATION</h1>
+
+    <h2>Ввод и Вывод</h2>
+    <div class="code-box">
+        <span class="kw">Console.New.Text</span> = "Текст" — Стандартный вывод.<br>
+        <span class="kw">Read(prompt, settings)</span> — Получение данных. <br>
+        <i>Аргумент <b>settings</b> позволяет применять Python-методы к вводу через встроенный eval.</i>
+    </div>
+
+    <h2>Директива Pass</h2>
+    <p><b>use pass * [Module]</b> — Глобальный проброс. Убирает необходимость указывать имя модуля перед его командами (работает для Console и любых других подключаемых библиотек).</p>
+
+    <h2>Система Use</h2>
+    <div class="code-box">
+        <span class="kw">use &lt;System&gt;</span> — Математика и Zona.<br>
+        <span class="kw">use &lt;gameengine&gt;</span> — Визуальный движок.<br>
+        <span class="kw">use &lt;time&gt;</span> — Модуль управления временем.<br>
+        <span class="kw">use &lt;videoplayer&gt;</span> — Работа с видео (cv2).<br>
+        <span class="kw">use &lt;pygame&gt;</span> — Библиотека pygame.
+    </div>
+
+    <h2>Управление кодом</h2>
+    <div class="code-box">
+        <span class="kw">tab</span> / <span class="kw">line</span> / <span class="kw">space</span> — Формирование структуры файла work.py.<br>
+        <span class="kw">workwrite [code]</span> — Прямая запись строки в исполняемый файл.<br>
+        <span class="kw">time [sec]</span> — Пауза (sleep).<br>
+        <span class="kw">exit</span> — Прерывание работы транслятора.
+    </div>
+
+    <div class="mail">
+        SUPPORT: <a href="mailto:h66859681@gmail.com">h66859681@gmail.com</a>
+    </div>
+</div>
+
+</body>
+</html>
