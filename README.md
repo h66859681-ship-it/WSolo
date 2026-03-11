@@ -1,0 +1,2 @@
+# WSolo
+My programming language
